@@ -46,5 +46,6 @@ ringBuffer<int16_t> rB(8); // Initialize empty ringbuffer for 8 Elements from ty
   }
   cout << "Average Value of ringbuffer: " << rB.getAverage() << endl;
   while(1)
-}```
+}
+```
 
