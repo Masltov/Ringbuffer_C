@@ -4,10 +4,6 @@ A queue-like structure to store an intended number of values of any numeric type
 When ringbuffer is full (member boolean *isFilled* is *true*) "oldest" Element will be overwritten by adding a new Element.
 Example:
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
 
 oldElement |    v      |     -     |    -
 ---------- | --------- | --------- | ---------
@@ -15,7 +11,7 @@ Ringbuffer | Element 1 | Element 2 | Element 3
 rB.data[]  |    1      |    2      |     3
 
 After Adding new Elemen with value 4 `rb.addElement(4);` ringbuffer looks like this:
-oldElement |           |    v      |    
+oldElement |     -     |    v      |    -
 ---------- | --------- | --------- | ---------
 Ringbuffer | Element 1 | Element 2 | Element 3 
 rB.data[]  |    4      |    2      |     3
@@ -34,14 +30,14 @@ Get Average Value of Elements by `nameOfRingBufVar.getAverage();` whereas type r
 
 ## Example
 
-`#include "RingBuffer.h"	
+```#include "RingBuffer.h	
 #include <iostream>
 
 using namespace std;
 
 int main(){
   
-	ringBuffer<int16_t> rB(8); // Initialize empty ringbuffer for 8 Elements from type int16_t
+ringBuffer<int16_t> rB(8); // Initialize empty ringbuffer for 8 Elements from type int16_t
   
   //Fill ringbuffer rB with elements
   for (int i = -4; i<4; i++)
@@ -50,5 +46,5 @@ int main(){
   }
   cout << "Average Value of ringbuffer: " << rB.getAverage() << endl;
   while(1)
-}`
+}```
 
