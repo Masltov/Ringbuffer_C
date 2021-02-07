@@ -4,11 +4,13 @@ A queue-like structure to store an intended number of values of any numeric type
 When ringbuffer is full (member boolean *isFilled* is *true*) "oldest" Element will be overwritten by adding a new Element.
 Example:
 oldElement |    v      |           |    
+---------- | --------- | --------- | ---------
 Ringbuffer | Element 1 | Element 2 | Element 3 
 rB.data[]  |    1      |    2      |     3
 
 After Adding new Elemen with value 4 `rb.addElement(4);` ringbuffer looks like this:
 oldElement |           |    v      |    
+---------- | --------- | --------- | ---------
 Ringbuffer | Element 1 | Element 2 | Element 3 
 rB.data[]  |    4      |    2      |     3
 
