@@ -3,7 +3,13 @@
 A queue-like structure to store an intended number of values of any numeric type.
 When ringbuffer is full (member boolean *isFilled* is *true*) "oldest" Element will be overwritten by adding a new Element.
 Example:
-oldElement |    v      |           |    
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
+oldElement |    v      |     -     |    -
 ---------- | --------- | --------- | ---------
 Ringbuffer | Element 1 | Element 2 | Element 3 
 rB.data[]  |    1      |    2      |     3
